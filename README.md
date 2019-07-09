@@ -39,12 +39,9 @@ Once Directory setup successfully, we can proceed to provision LAMP Container st
 **Step 3- Install docker-compose:**
 
 We need to install docker-compose if it's not already setup. follow the command below to finish the installation.
-```
-curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
-Make docker-compose executable
-```
-chmod +x /usr/local/bin/docker-compose
+
+```bash
+zypper -n in docker-compose
 ```
 
 **Step 4- Setup Container LAMP stack:**
