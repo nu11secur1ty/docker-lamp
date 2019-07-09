@@ -17,7 +17,7 @@ git clone https://github.com/nu11secur1ty/docker-lamp
 ```
 **Change Directroy**
 ```
-cd Docker-LAMP
+cd docker-lamp
 ```
 
 **Step 2- Setup prerequisites:**
