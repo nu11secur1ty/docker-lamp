@@ -59,7 +59,7 @@ docker ps
 ```
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                            NAMES
 326da5972785        phpmyadmin/phpmyadmin          "/run.sh supervisord…"   About an hour ago   Up About an hour    9000/tcp, 0.0.0.0:8080->80/tcp   docker-lamp_phpmyadmin_1
-c1a700d81c42        amarsingh3d/apache2.4-php7.2   "/bin/sh -c '/usr/sb…"   About an hour ago   Up About an hour    0.0.0.0:80->80/tcp               docker-lamp_www_1
+c1a700d81c42        nu11secur1ty/suse-apache-docker-php7   "/bin/sh -c '/usr/sb…"   About an hour ago   Up About an hour    0.0.0.0:80->80/tcp               docker-lamp_www_1
 7480657c8ced        mysql:5.6                      "docker-entrypoint.s…"   About an hour ago   Up About an hour    0.0.0.0:3306->3306/tcp           docker-lamp_db_1
 ```
 All Three Containers are up and running.
@@ -68,11 +68,11 @@ All Three Containers are up and running.
 
 In order to verify Apache container, check your Docker host IP address and access IP Address in the browser. In my case My IP address is following
 
-http://10.0.1.170
+http://0.0.0.0
 
 ![image](https://3.bp.blogspot.com/-zJBHaXuksvQ/XDbp8XugwrI/AAAAAAAAFE8/jOK-LTQzUl8gfSs38aynOdQF8581HSQ4gCLcBGAs/s640/ub.png)
 
-http://10.0.1.170/phpinfo.php
+http://0.0.0.0/phpinfo.php
 
 ![image](https://4.bp.blogspot.com/-1CzCJtqwCd8/XDbqNfCXhFI/AAAAAAAAFFE/o1PIqBZbBtcRnZ1mh2srVC5T4rYVZsQwACLcBGAs/s640/ubb.png)
 
@@ -80,7 +80,7 @@ http://10.0.1.170/phpinfo.php
 
 To check PhpMyAdmin login, browse Docker host IP with port 8080
 
-http://10.0.1.170:8080
+http://0.0.0.0:8080
 
 Enter the User **root** and Password is **test** that we defined in our **docker-compose.yaml** file.
 
