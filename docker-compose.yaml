@@ -1,7 +1,8 @@
 version: "2"
 services:
     www:
-        image: amarsingh3d/apache2.4-php7.2
+#        image: amarsingh3d/apache2.4-php7.2
+        image: php:7.2-apache
         ports: 
             - "80:80"
         volumes:
