@@ -3,11 +3,11 @@
 
 This document describe how to setup LAMP stack with Docker and Container. In this guide, We will setup three Container
 
-o - Apache and php Container
+- Apache and php Container
 
-o - MySQL Container
+- MySQL Container
 
-o - PhpMyAdmin Container
+- PhpMyAdmin Container
 
 **Step 1- Clone git repository to your local machine and change directory**
 
