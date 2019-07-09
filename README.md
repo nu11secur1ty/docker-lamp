@@ -13,7 +13,7 @@ o - PhpMyAdmin Container
 
 Run following command to clone reposiory to your local system.
 ```
-git clone https://github.com/amarsingh3d/Docker-LAMP.git
+git clone https://github.com/nu11secur1ty/docker-lamp
 ```
 **Change Directroy**
 ```
