@@ -89,8 +89,8 @@ All Three Containers are up and running.
 - Start containers
 ```bash
 docker run -d nu11secur1ty/suse-apache-docker-php7
-docker run -d
-docker run -d
+docker run -d phpmyadmin/phpmyadmin
+docker run -d mysql:5.6
 ```
 **Verify Apache Container and php version using phpinfophp.php file.**
 
