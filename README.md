@@ -78,6 +78,7 @@ Above command will start container in intractive mode, you can launch your conta
 ```
 docker ps
 ```
+- Output
 ```
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                            NAMES
 326da5972785        phpmyadmin/phpmyadmin          "/run.sh supervisord…"   About an hour ago   Up About an hour    9000/tcp, 0.0.0.0:8080->80/tcp   docker-lamp_phpmyadmin_1
@@ -90,7 +91,7 @@ All Three Containers are up and running.
 docker run -d nu11secur1ty/suse-apache-docker-php7
 docker run -d
 docker run -d
-
+```
 **Verify Apache Container and php version using phpinfophp.php file.**
 
 In order to verify Apache container, check your Docker host IP address and access IP Address in the browser. In my case My IP address is following
@@ -115,6 +116,7 @@ After successful authentication, your output would be like below screenshot
 
 ![image](https://1.bp.blogspot.com/-XamxqDQWAGY/XDbrncOgA2I/AAAAAAAAFFQ/ZfYhmfyD_qY_wEebQghH1Zq3ENi5LSAowCLcBGAs/s640/ubbb.png)
 
+------------------------------------------------------------------------------------------------------------------------
 
 **docker save**
 
@@ -137,9 +139,12 @@ $ docker save -o fedora-all.tar fedora
 
 $ docker save -o fedora-latest.tar fedora:latest
 ```
+
 ---------------------------------------------------------------------------
 
+
 **docker load**
+
 - Examples
 
 ```bash
