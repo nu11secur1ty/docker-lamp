@@ -43,6 +43,14 @@ We need to install docker-compose if it's not already setup. follow the command 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+- Apply executable permissions to the binary
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+- Soft link
+```bash
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
 
 ```bash
 zypper -n in docker-compose
