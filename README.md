@@ -119,6 +119,7 @@ After successful authentication, your output would be like below screenshot
 ------------------------------------------------------------------------------------------------------------------------
 
 **docker save**
+- Example
 
 - Create a backup that can then be used with docker load
 
