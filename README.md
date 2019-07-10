@@ -79,6 +79,11 @@ c1a700d81c42        nu11secur1ty/suse-apache-docker-php7   "/bin/sh -c '/usr/sbâ
 7480657c8ced        mysql:5.6                      "docker-entrypoint.sâ€¦"   About an hour ago   Up About an hour    0.0.0.0:3306->3306/tcp           docker-lamp_db_1
 ```
 All Three Containers are up and running.
+- Start containers
+```bash
+docker run -d nu11secur1ty/suse-apache-docker-php7
+docker run -d
+docker run -d
 
 **Verify Apache Container and php version using phpinfophp.php file.**
 
