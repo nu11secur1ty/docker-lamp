@@ -51,7 +51,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```bash
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
-
+- Test the installation.
+```bash
+docker-compose --version
+```
+- For OpenSuse
 ```bash
 zypper -n in docker-compose
 ```
