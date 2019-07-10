@@ -33,11 +33,17 @@ Copy phpinfo.php to DocumentRoot
 cp phpinfo.php DocumentRoot
 ```
 
-
 Once Directory setup successfully, we can proceed to provision LAMP Container stack
 
-**Step 3- Install docker-compose:**
-
+**Step 3- Install docker docker-compose:**
+- Docker for RedHat8
+```
+ curl  https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+ yum makecache
+ dnf makecache
+ dnf update
+ dnf install docker-ce
+```
 We need to install docker-compose if it's not already setup. follow the command below to finish the installation.
 - Direct
 ```bash
