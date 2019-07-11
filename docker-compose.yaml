@@ -1,7 +1,7 @@
 version: "2"
 services:
     www:
-        image: amarsingh3d/apache2.4-php7.2
+        image: nu11secur1ty/suse-apache-docker-php7
         ports: 
             - "80:80"
         volumes:
