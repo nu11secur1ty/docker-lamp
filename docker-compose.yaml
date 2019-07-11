@@ -1,4 +1,3 @@
-
 version: "2"
 services:
     www:
@@ -37,6 +36,3 @@ services:
             MYSQL_ROOT_PASSWORD: test 
 volumes:
 persistent:
-        
-
-
