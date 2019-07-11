@@ -11,8 +11,8 @@ services:
         networks:
             - default
     db:
-        image: mysql:5.6
-        #image: mysql/mysql-docker
+        #image: mysql:5.6
+        image: mysql/mysql-server
         ports: 
             - "3306:3306"
         environment:
