@@ -1,7 +1,7 @@
 version: "2"
 services:
     www:
-        image: nu11secur1ty/suse-apache-docker-php7
+        image: amarsingh3d/apache2.4-php7.2
         ports: 
             - "80:80"
         volumes:
@@ -11,7 +11,7 @@ services:
         networks:
             - default
     db:
-        image: mysql:8.0
+        image: mysql:5.6
         ports: 
             - "3306:3306"
         environment:
@@ -35,4 +35,4 @@ services:
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
 volumes:
-persistent:
+    persistent:
