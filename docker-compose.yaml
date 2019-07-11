@@ -8,24 +8,45 @@ services:
             - ./DocumentRoot:/var/www/html/
         links:
             - db
+            
         networks:
             - default
-    db:
-        image: mysql:5.7
-        #image: mysql/mysql-server
-        ports: 
-            - "3306:3306"
-        environment:
-            MYSQL_DATABASE: myDb
-            MYSQL_USER: user
-            MYSQL_PASSWORD: test
-            MYSQL_ROOT_PASSWORD: test 
-        volumes:
-            - ./MySQL_DATA:/docker-entrypoint-initdb.d
-            - persistent:/var/lib/mysql
+            
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+#    db:
+#        image: mysql:5.7
+#        #image: mysql/mysql-server
+#        ports: 
+#            - "3306:3306"
+#        environment:
+#            MYSQL_DATABASE: myDb
+#            MYSQL_USER: user
+#            MYSQL_PASSWORD: test
+#            MYSQL_ROOT_PASSWORD: test 
+#        volumes:
+#            - ./MySQL_DATA:/docker-entrypoint-initdb.d
+#            - persistent:/var/lib/mysql
         networks:
             - default
-    phpmyadmin:
+   
+   
+   phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
             - db:db
