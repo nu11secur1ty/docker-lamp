@@ -1,33 +1,31 @@
+
 version: "2"
 services:
-   www:
+    www:
         image: nu11secur1ty/suse-apache-docker-php7
         ports: 
             - "80:80"
         volumes:
             - ./DocumentRoot:/var/www/html/
-         lnks:
-           - db
-       networks:
-           - default
-       db:
-       image: mariadb
-       #image: mysql:5.7
-       #image: mysql/mysql-server
-       ports: 
-           - "3306:3306"
-       environment:
-           MYSQL_DATABASE: myDb
-           MYSQL_USER: user
-           MYSQL_PASSWORD: test
-           MYSQL_ROOT_PASSWORD: test 
-       volumes:
-           - ./MySQL_DATA:/docker-entrypoint-initdb.d
-           - persistent:/var/lib/mysql
-           - db        
-       networks:
-           - default
-        phpmyadmin:
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql:5.6
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: myDb
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test 
+        volumes:
+            - ./MySQL_DATA:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
             - db:db
@@ -38,4 +36,7 @@ services:
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
 volumes:
-    persistent:
+persistent:
+        
+
+
