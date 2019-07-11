@@ -175,4 +175,8 @@ fedora              20                  58394af37342        7 weeks ago         
 fedora              heisenbug           58394af37342        7 weeks ago         385.5 MB
 fedora              latest              58394af37342        7 weeks ago         385.5 MB
 ```
-
+# Resources:
+```url
+https://hub.docker.com/r/phpmyadmin/phpmyadmin/
+https://hub.docker.com/r/nu11secur1ty/suse-apache-docker-php7
+```
